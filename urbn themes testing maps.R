@@ -213,6 +213,25 @@ household_data2 %>%
 
 ggsave("map1.jpg", dpi = 800, width = 12, height = 8)
 
+household_data2 %>%
+  filter(state_name %in% c("New Mexico", "Texas")) %>%
+  ggplot() +
+  geom_sf(mapping = aes(fill = medhhincome, geometry = geometry),
+          color = "black", size = 0.25) +
+  coord_sf(datum = NA, crs = 5070) +
+  # coord_sf(crs = 102003) +
+  scale_fill_gradientn(labels = scales::dollar,
+                       guide_colorbar(title = "Median Household Income",
+                                      title.position = "top",
+                                      barwidth = 0.5,
+                                      barheight = 4)) +
+  guides(fill = guide_colorbar(title = "Median Household Income",
+                               barwidth = 16,
+                               barheight = 1)) +
+  theme_minimal() +
+  theme(legend.position = "top")
+
+
   # labs(fill = "Median household income") +
   # theme(legend.position = "bottom")
   # theme_urbn_map()
