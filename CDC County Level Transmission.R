@@ -54,10 +54,12 @@ CDC_data %>%
   scale_fill_gradientn(labels = scales::comma,
                        guide_colorbar(title = "Cases per 100k \n 7-day average",
                                       title.position = "top",
-                                      barwidth = 12,
-                                      barheight = 1))
+                                      barwidth = 16,
+                                      barheight = 1)) +
+  theme_minimal() +
+  theme(legend.position = "top")
 
-ggplotly(p1)
+# ggplotly(p1)
 
 ggsave("cases_per_100k_7_day_avg.jpg", dpi = 800, width = 12, height = 8)
   
