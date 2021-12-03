@@ -3,6 +3,8 @@ rm(list = ls())
 # https://urbaninstitute.github.io/r-at-urban/graphics-guide.html
 # install.packages("devtools")
 # devtools::install_github("UrbanInstitute/urbnthemes")
+# devtools::install_github("UrbanInstitute/urbnthemes")
+# devtools::install_github("UrbanInstitute/urbnmapr")
 # https://stackoverflow.com/questions/40980189/removing-latitude-and-longitude-labels-in-ggplot
 # https://urbaninstitute.github.io/urbnmapr/articles/introducing-urbnmapr.html
 
